@@ -1,0 +1,71 @@
+.main_link {
+  color: red;
+  /*text-decoration используется для редактирования текста, зачеркнутое, подчеркнутое,
+  надчеркнутое и тд*/
+  text-decoration: none;
+}
+/*псевдоклассы ставятся через двоеточие, hover отвечает за действие при наведении.
+К псевдоклассам можно обращаться не только через class, но и через id и теги, псевдоклассы
+в основном отвечают за какое-либо действие*/
+.main_link:hover{
+  color: blue;
+  text-decoration: underline;
+  /*text-decoration-color используется для текста, который был в text-decoration
+  линии и тд, меняет его цвет*/
+  text-decoration-color: red;
+  /*cursor отвечает за курсор мышки, pointer будто можно кликнуть, можно
+  указать url в качестве любой картинки*/
+  cursor: pointer;
+}
+/*псевдокласс active отвечает за действие по нажатию на мышку*/
+.main_link:active{
+  text-decoration: line-through;
+}
+/*псевдокласс visited отвечает за действие по пройденным ссылкам и в основном
+используется для ссылок, в основном используется только для изменения цвета*/
+.main_link:visited{
+  color: grey;
+}
+
+input {
+  color: blue;
+}
+/*псевдокласс focus используется при написании текста (т.е курсор мыши находится
+в поле ввода текста)*/
+/* псевдоклассы required, disabled, enabled используется для input полей с таким
+же аттрибутом input:disable, input:required, input:enabled*/
+input:focus{
+  color: red;
+}
+/*псевдокласс not используется для противоположного условия какого-либо другого
+псевдокласса, после его написания выбирается другой псевдокласс not(:empty).
+Empty псевдокласс который означает пустое поле*/
+p.text:not(:empty){
+  color: purple;
+}
+/*псевдоэлементы можно добавлять к псевдоклассам, можно указать аттрибут тега, через
+значение attr*/
+p.text:empty::after{
+  content: attr(title);
+  color: pink;
+}
+/*псевдоэлементы добавляются через двойное двоеточие, after добавляется
+после тега, before перед тегом*/
+#Some_text::after{
+  content: '123';
+  color: yellow;
+  text-decoration: line-through;
+}
+/*псевдоэлемент first-letter используется первую букву в теге, first-line использует
+первую линию текста, при этом даже при масштабировании, сохраняется сам стиль*/
+p.main_link::first-line{
+  color: green;
+}
+/* псевдокласс first-of-type использует первое значение тега, last-of-type использует
+последнее значение тега*/
+div p:first-of-type{
+  text-decoration: line-through;
+}
+div p:last-of-type{
+  text-decoration: line-through;
+}

@@ -1,0 +1,120 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.block{
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background: red;
+}
+/*float используется в блочных схемах, создает обтекаемость объекта, при его использовании
+другие блочные элементы, тоже должны содержать float элементы, можно переместить блок
+рядом с другим блоком*/
+/*#first{
+  float: right;
+}
+#second{
+  float:left;
+  background: blue;
+}*/
+body{
+  height: 2000px;
+}
+#some_block{
+  width: 50px;
+  height: 50px;
+  background: red;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  /*position: absoulute влияет на позицинирование блока, т.е он находится в самой
+  первой изначальной точке (слева вверху) и не создает отдельный блок*/
+  /*position:fixed создает блок, который перемещается вместе со скроллингом, так же
+  не создает отдельный блок*/
+  position: fixed;
+  left: 20px;
+  top: 50px;
+}
+#Header, #footer{
+  width: 100%;
+  height: 70px;
+  border-bottom: 4px solid silver;
+  text-align: center;
+  background: #333;
+  color: #fff;
+  /*line-height расстояние между строками текста, для того, чтобы поставить его ровно
+  по центру, нужно установить значение как и в height*/
+  line-height: 70px;
+  margin-bottom: 70px;
+  float:left;
+}
+#nav{
+  /*list-style отвечает за стиль в списке, none делается чтобы убрать кружочки,
+  цифры и другие элементы списка*/
+  list-style: none;
+  display: block;
+  float: left;
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#nav li{
+  display: inline;
+  background: #fafafa;
+  border: 1px solid silver;
+  padding: 0 20px;
+  cursor: pointer;
+}
+/*здесь мы выбрали все элементы, кроме последнего и указали отступ слева*/
+#nav li:not(:last-of-type){
+  margin-right: 20px;
+}
+#nav li:hover{
+  color: #fff;
+  background: #333;
+  border-radius: 50px;
+  border-radius: #333;
+  transition: margin 1s;
+  margin-left: 10px;
+
+}
+
+
+#Main{
+  width: 50%;
+  margin-left: 10%;
+  background: #fafafa;
+  border: 1px solid silver;
+  padding: 20px 2.5%;
+  /*z-index отвечает за слои, т.е в html тег который идет после других тегов,
+  итеет приоритетный слой, чтобы убрать это , необходимо прописать z-index и всегда
+  используется значение position. Чем выше z-index тем выше слой*/
+  z-index: 1;
+  position: relative;
+  float: left;
+}
+/*при создании aside необходимо учитывать ширину процентов сделанных в main, т.е
+там 65%, нельзя превышать 35%*/
+#Aside{
+  width: 20%;
+  padding: 20px 2.5%;
+  background: #fafafa;
+  border: 1px solid silver;
+  float: left;
+  margin-left: 5%;
+  /*position влияет на блоки, им можно менять позицию блока относительно того места,
+  где он сейчас находится: right, left, top , bottom*/
+  position: relative;
+  z-index: 0;
+  bottom: -10px;
+  left: -200px;
+}
+#footer{
+  border-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 50px;
+  border-top: 4px solid silver;
+}

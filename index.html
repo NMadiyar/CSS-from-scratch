@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML+CSS</title>
+<!--style добавляется в head, это считается правильным, т.к отсюда удобнее обращаться
+ ко всем тегам, внутри style пишется тег, которому нужно добавить стили, открыв
+при этом фигурные скобки: <style> b {color: red}  </style>, так же можно добавлять
+через ";"
+  <style>
+    b {
+      color: red
+    }
+    </style>-->
+  <!-- для добавления СSS нужно прописать link, с аттрибутом rel=stylesheet
+чтобы показать, что это стили CSS, а в  href указать путь к файлу CSS  -->
+<link rel="stylesheet" href="css/block.css">
+  </head>
+  <body>
+    <!--style добавляется к абсолютно любому тегу, для добавления CSS кода,
+    можно добавлять через ";", используется только если надо добавить 1-2 стиля,
+  для остальных вариантов не используется-->
+  <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et <b>dolore</b> magna aliqua. Ut enim
+       ad minim veniam </p>
+  <!-- селекторы выбора, есть выборка class, вписывается в каждой тег, во вкладке
+  css создается обращение через точку-->
+  <p >Lorem ipsum dolor sit <i class="main-text">amet</i>, consectetur adipisicing elit, sed do eiusmod
+    <b class="main-text">tempor</b> incididunt ut labore et dolore magna aliqua</p>
+
+  <!-- выборка id,вписывается в тег, служит для одинарных объектов (шапка, футер),
+  нельзя использовать для повторяющихся элементов, в css обращается через "#"-->
+  <p id="text-p">Lorem ipsum dolor sit <i class="main-text">amet</i>, consectetur adipisicing elit, sed do eiusmod
+    <b class="main-text">tempor</b> incididunt ut labore et dolore magna aliqua</p>
+  <!-- выборка для отдельного тега,вписывается в css отдельно тег (p,body,h1 и тд)-->
+  <!-- вложенный селектор выбора, вписывается в сss тег, внутри которого есть еще тега
+  и так далее (div p b), так же внутри css можно через запятую обращаться к другим
+тегам, классам (div p b, div i, #id, div)-->
+<div>
+  <p >Lorem ipsum dolor sit <i>amet</i>, consectetur adipisicing elit, sed do eiusmod
+    <b>tempor</b> incididunt ut labore et dolore magna aliqua</p>
+
+  <a href="#" class="main_link">Ccылка</a>
+  <p class="main_link">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo</p>
+
+  <input type="text" placeholder="Введите текст"><br>
+
+  <p class="text">Simple</p>
+  <p class="text" title="Ewe odin text"></p>
+</div>
+  <div id="Some_text">Some text</div>
+
+  <div id="first"></div>
+
+  <div id="second"></div>
+
+  <p class="text_1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua</p>
+
+  <div class="blocks">
+Simple
+</div>
+  <span class="blocks">Simple</span>
+  </body>
+</html>

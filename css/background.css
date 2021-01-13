@@ -1,0 +1,45 @@
+/*-- background-color используется для добавления заднего фона, можно использовать
+не только названия цветов, но и их HEX код*/
+/* background-image используется для вставления картинки на заднем фоне, можно
+через url*/
+/*background-repeat отвечает за  повтор картинки repeat-x, повторяется по горизонтали,
+repeat-y повторяется по вертикали*/
+/* background-position отвечает за позицию картинки*/
+#first{
+/*background-color: #428c6a;
+color: red;
+background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg');
+background-repeat: no-repeat;
+background-position: center; */
+/*либо можно все эти данные запихать в один background через пробелы*/
+background: #428c6a url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg')
+no-repeat center top;
+height: 500px;
+/*background-size используется для размера картинки заднего фона, cover означает
+полностью покрыть картинкой тег*/
+background-size: cover;
+/*background-attachment: fixed отвечает за фиксацию изображения при скроллинге вверх
+или вниз, т.е картинка не движется */
+background-attachment: fixed;
+}
+
+#second{
+  height: 2000px;
+}
+/* Можно создавать классы внутри классов class= "small-image borderstyle " они делаются 
+через пробел*/
+/*Можно скачивать шрифты и добавлять их, указывать через href ссылку,
+ h2 {
+    font-family: Lobster, monospace;
+    font-size: 16px;
+  }
+    через запятую добавляются шрифты, если первый
+    шрифт не поддерживает браузер*/
+/* Можно добавлять границы к тегам,
+.thick-green-border {
+  border-color: green;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 10px; позволяет обрезать углы границ
+}
+*/
